@@ -1,5 +1,5 @@
-#ifndef LMS_STUDENT_H
-#define LMS_STUDENT_H
+#ifndef LMS_PEOPLE_H
+#define LMS_PEOPLE_H
 
 #include <string>
 #include <vector>
@@ -7,18 +7,17 @@
 using namespace std;
 
 // This class is a general class for the both teachers and the students
-class Student {
+class People {
 private:
     string name;
     string password;
-    int maximum_copies;
-    int maximum_period;
+
     vector<string> borrowed_id_list;           // Keep the track of IDs of the book. ID is string with length 3
 
 public:
 
-    Student();
-    Student(string user_name, string user_password);
+    People();
+    People(string user_name, string user_password);
 
     // Getters
     /**
@@ -26,20 +25,19 @@ public:
      *
      */
     string getName() const;
-    int getMaxCopies() const;
-    int getMaxPeriod() const;
+
     vector<string> getIdList() const;
 
     // Setter
     void setName(string new_name);
 
-    // Mutator for add a ID to a list
+    // Mutator for add an ID to a list
     /**
      * This function will add ID's of borrowed books to the list. If process is blocked return false otherwise true
      * @param ID
      * @return bool value represents the status. If successful returns tru false otherwise
      */
-    bool addIdToList(string ID);
+    virtual bool addIdToList(string ID);
 
     // Maximum number of copies and the maximum periods can not be changed for security reasons
 
@@ -48,8 +46,8 @@ public:
      * @param check_password
      * @return return true if passwords are match false otherwise
      */
-    bool checkPassword(string check_password);
+    bool checkPassword(string &check_password);
 };
 
 
-#endif //LMS_STUDENT_H
+#endif //LMS_PEOPLE_H
