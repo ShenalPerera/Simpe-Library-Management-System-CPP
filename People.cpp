@@ -35,3 +35,8 @@ bool People::addIdToList(string ID) {
     borrowed_id_list.push_back(ID);
     return true;
 }
+
+
+unsigned int People::getIDListSize() const {
+    return borrowed_id_list.size();
+}

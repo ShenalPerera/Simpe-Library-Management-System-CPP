@@ -25,8 +25,8 @@ public:
      *
      */
     string getName() const;
-
     vector<string> getIdList() const;
+    unsigned int getIDListSize() const;
 
     // Setter
     void setName(string new_name);
@@ -47,6 +47,8 @@ public:
      * @return return true if passwords are match false otherwise
      */
     bool checkPassword(string &check_password);
+
+
 };
 
 
