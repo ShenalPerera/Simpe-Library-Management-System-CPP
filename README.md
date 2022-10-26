@@ -1,2 +1,4 @@
-# Simpe-Library-Management-System-CPP-
+# Simpe-Library-Management-System-CPP
 A LMS is a software that uses to maintain the record of the library.
+
+A **L**ibrary **M**anagement **S**ystem (LMS) is software that is used to keep track of the library's records. It comprises work such as the number of books accessible in the library, the number of books issued, returning or renewing a book, late penalty record, and so on. LMS can assist with the maintenance of a database that is important for entering new books and recording books borrowed by members, along with the relevant submission dates. Furthermore, it decreases the librarian's manual record load. LMS enables librarians to manage library resources in a more efficient manner, saving them time. It is also easier for the librarian to handle the book allocation and payment procedure.
