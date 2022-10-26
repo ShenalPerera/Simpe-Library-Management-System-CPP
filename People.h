@@ -25,7 +25,7 @@ public:
      *
      */
     string getName() const;
-    vector<string> getIdList() const;
+    vector<string>& getIdList();
     unsigned int getIDListSize() const;
 
     // Setter

@@ -18,7 +18,7 @@ string People::getName() const {
 }
 
 
-vector<string> People::getIdList() const {
+vector<string>& People::getIdList(){
     return borrowed_id_list;
 }
 
