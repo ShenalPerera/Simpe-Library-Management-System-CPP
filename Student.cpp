@@ -1,13 +1,54 @@
 #include "Student.h"
 
-// Initialize the const variable while object is creating and call the super constructor of people
-Student::Student(string stu_name,string stu_password):max_copies(5),max_period(30), People(stu_name,stu_password){}
+using namespace std;
 
-// Override the function to that returns false if process snot success and false otherwise
-bool Student::addIdToList(string ID) {
-    if (getIDListSize() < max_copies){
-        getIdList().push_back(ID);
-        return true;
-    }
-    return false;
+Student::Student():max_period(30),max_copies(5) {
+    this->username = "Default student";
+    this->password = "abc@123";
+}
+
+Student::Student(const string &username, const string &password, int maxCopies, int maxPeriod) : username(username),
+                                                                                                 password(password),
+                                                                                                 max_copies(maxCopies),
+                                                                                                 max_period(
+                                                                                                         maxPeriod) {}
+
+const string &Student::getUsername() const {
+    return username;
+}
+
+void Student::setUsername(const string &username) {
+    this->username = username;
+}
+
+const string &Student::getPassword() const {
+    return password;
+}
+
+void Student::setPassword(const string &password) {
+    this->password = password;
+}
+
+int Student::getMaxCopies() const {
+    return max_copies;
+}
+
+void Student::setMaxCopies(int maxCopies) {
+    max_copies = maxCopies;
+}
+
+int Student::getMaxPeriod() const {
+    return max_period;
+}
+
+void Student::setMaxPeriod(int maxPeriod) {
+    max_period = maxPeriod;
+}
+
+const vector<Book> &Student::getCopyList() const {
+    return copy_list;
+}
+
+void Student::setCopyList(const vector<Book> &copyList) {
+    copy_list = copyList;
 }
